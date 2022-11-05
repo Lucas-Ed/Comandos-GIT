@@ -74,7 +74,7 @@ Gerar uma key:
 ssh-keygen
 ```
 ---
-Desfazer commi:
+Desfazer commit:
 ```bash
 git reset HEAD~1
 ```
