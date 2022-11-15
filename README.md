@@ -135,7 +135,9 @@ git rebase <nome_da_branch>
 git rebase main
 ```
 ### Se precisar buscar na origin, quando não foi feito `git push -u`
+```bash
 git pull origin <nome_da_branch>
+```
 ---
 Gerar uma key:
 ```bash
