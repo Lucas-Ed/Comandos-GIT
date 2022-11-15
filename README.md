@@ -23,7 +23,8 @@ Permite ver as atuzalizações feitas:
 git log
 ```
 ---
-Iniciar um novo repositório:
+#### Git init
+O principal comando para inicializar o git é o git init. Ao executar esse comando uma pasta chamada .git é criada no diretório onde ele foi executado e nessa pasta você pode fazer o link para a origem (origin) remota, que pode ser o GitHub, GitLab, Bitbucket ou qualquer outra plataforma que utilize o Git,ele é utilizado para iniciar um novo repositório.
 ```bash
 git init
 ```
@@ -36,38 +37,105 @@ git status
 ---
 Adiciona arquivos ao histórico do projeto, na staging:
 ```bash
+git add <. ou arquivo ou pasta>
+
+# Adicionando todos os arquivos e pastas
 git add .
+
+# Adicionando um arquivo
+git add index.html
+
+# Adicionando uma pasta
+git add assets
 ```
 ---
-Registra/salva a alteração no repositório:
+#### Registra/salva a alteração no repositório:
 ```bash
 git commit -m "escolha um nome pro Commit"
 ```
+ou
+```bash
+# Exemplo
+git commit -m "feat(auth): create login screen"
+```
 ---
-Informa a pasta remota:
+#### Informa a pasta remota:
 ```bash
 git remote add origin https://github.com/sua-pasta/de-exemplo.git
 ```
 ---
-Publica as alterações no repositório remoto:
+#### Git push
+Esse comando faz com que todos os nossos commits sejam empurrados (tipo um upload) na origem do repositório, poe exemplo, dentro do GitHub. Ao executar com o `-u` você está dizendo que essa branch faz parte de um repositório remoto, o `-u` é uma abreviação para o `--set-upstream`.
+
+Não será necessário utilizar o -u o tempo todo, apenas quando novas branches forem criadas para joga-las no provedor Git.
+
+Caso o git push seja executado sem o -u será necessário sempre informar a origem e o nome da branch para que as alterações sejam levadas ao provedor Git.
+
 ```bash
 git push -u origin master
 ```
+ou
+```bash
+# Na primeira vez
+git push -u origin <nome_da_branch>
+```
+ou
+```bash
+# Quando executado sem -u
+git push origin <nome_da_branch>
+```
 ---
-Permite visualizar informações sobre qualquer commit:
+#### Permite visualizar informações sobre qualquer commit:
 ```bash
 git show número-do-commit
 ```
 ---
-Permite visualizar o repositório remoto:
+#### Permite visualizar o repositório remoto:
 ```bash
 git remote -v
 ```
 ---
-Baixa as alterações no repositório remoto.:
+#### Baixa as alterações no repositório remoto:
 ```bash
 git pull
 ```
+ou
+```bash
+# Se precisar buscar na origin, quando não foi feito `git push -u`
+git pull origin <nome_da_branch>
+```
+#### Git checkout
+O git checkout acessa branches, ou seja, ramificações existentes (locais ou remotas) e também cria uma nova branch a partir de outra que você já esteja, quando acompanhado do -b em sua execução.
+
+As branches normalmente são utilizadas para criar novas features sem precisar afetar a principal, ou seja, a branch main (na maior parte dos casos), Como utilizar:
+```bash
+git checkout <nome_da_branch>
+
+# Para criar uma nova branch
+git checkout -b <nome_da_branch>
+```
+Lista todas as branches locais ou remotas, também delete branches locais.
+
+Como utilizar:
+```bash
+git branch
+
+# Para deletar uma branch local
+git branch -D <nome_da_branch>
+
+# Para deletar uma branch remota
+git push --delete origin <nome_da_branch>
+```
+#### Git rebase
+Esse comando alinha todos os commits de uma branch, seja a principal ou qualquer outra que você escokher na branch atual em que você está localizado, porém sem criar um novo commit, como faz o git merge, mantendo o histórico linear.
+```bash
+git rebase <nome_da_branch>
+
+# Exemplo, você atualmente está na branch "tela-de-login"
+git rebase main
+```
+# Se precisar buscar na origin, quando não foi feito `git push -u`
+git pull origin <nome_da_branch>
 ---
 Gerar uma key:
 ```bash
