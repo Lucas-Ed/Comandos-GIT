@@ -18,6 +18,17 @@ Configuração de e-mail:
 git config --global user.email "seu-email.com.br"
 ```
 ---
+Gerar Key pro github
+```bash
+ssh-keygen -t ed25519 -c "seu-email-do-github"
+```
+---
+Gerar uma key:
+```bash
+ssh-keygen
+```
+---
+
 Permite ver as atuzalizações feitas:
 ```bash
 git log
@@ -137,11 +148,6 @@ git rebase main
 ### Se precisar buscar na origin, quando não foi feito `git push -u`
 ```bash
 git pull origin <nome_da_branch>
-```
----
-Gerar uma key:
-```bash
-ssh-keygen
 ```
 ---
 Desfazer commit:
