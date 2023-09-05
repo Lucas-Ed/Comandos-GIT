@@ -58,6 +58,9 @@ git add index.html
 
 # Adicionando uma pasta
 git add assets
+
+# Desfaz o comando git add .
+git reset
 ```
 ---
 ### Registra/salva a alteração no repositório:
