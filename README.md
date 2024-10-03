@@ -166,6 +166,9 @@ rm -rf .git
 Renomear commit:
 ```bash
 git commit --amend
+
+
+
 ```
 ---
 listar conflitos:
