@@ -167,12 +167,44 @@ Renomear commit:
 ```bash
 git commit --amend
 
-
-
 ```
 ---
 listar conflitos:
 ```bash
 git diff --base
 ```
+---
+
+Apagar último Commit do repositório, encontre o hash do commit que deseja reverter:
+```bash
+git log
+```
+
+Use o comando git revert seguido pelo hash do commit:
+```bash
+git revert <hash_do_commit>
+```
+
+Faça o push das mudanças para o repositório remoto:
+
+```bash
+git push origin <nome_da_branch>
+
+```
+
+
+Apagar o último commit no repositório local:
+
+```bash
+git reset --hard HEAD~1
+
+```
+
+Atualizar o repositório remoto
+
+
+```bash
+git push origin <nome_da_branch> --force
+```
+
 ---
