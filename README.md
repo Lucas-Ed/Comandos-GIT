@@ -191,7 +191,7 @@ Faça o push das mudanças para o repositório remoto:
 git push origin <nome_da_branch>
 
 ```
-
+---
 
 Apagar o último commit no repositório local:
 
