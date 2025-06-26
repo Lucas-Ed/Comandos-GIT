@@ -141,7 +141,7 @@ git branch -D <nome_da_branch>
 git push --delete origin <nome_da_branch>
 ```
 ### Git rebase
-Esse comando alinha todos os commits de uma branch, seja a principal ou qualquer outra que você escokher na branch atual em que você está localizado, porém sem criar um novo commit, como faz o git merge, mantendo o histórico linear.
+Esse comando alinha todos os commits de uma branch, seja a principal ou qualquer outra que você escolher na branch atual em que você está localizado, porém sem criar um novo commit, como faz o git merge, mantendo o histórico linear.
 ```bash
 git rebase <nome_da_branch>
 
@@ -205,6 +205,8 @@ Atualizar o repositório remoto
 
 ```bash
 git push origin <nome_da_branch> --force
+
+git push origin main --force
 ```
 
 ---
